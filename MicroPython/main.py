@@ -18,7 +18,8 @@ while True:
     if button_a.is_pressed():
         current_temperature_celcius = temperature()
         current_temperature_kelvin = current_temperature_celcius + 273.15
-        display.scroll("The temperature is " + str(current_temperature_kelvin) + " K.")
+        current_temperature_kelvin = round(current_temperature_kelvin)
+        display.scroll("The temperature is: " + str(current_temperature_kelvin) + " K.")
 
         display.clear()
         display.show(Image.HAPPY)
