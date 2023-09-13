@@ -1,10 +1,25 @@
 """
 Created by: Mr. Coxall
 Created on: Sep 2020
-This module is a Micro:bit MicroPython program
+This module shows current temperature, in Kelvin.
 """
 
 from microbit import *
 
 
-display.scroll("Hello, World!")
+# variables
+current_temperature_celcius = 0
+current_temperature_kelvin = 0
+
+display.clear()
+display.show(Image.HAPPY)
+
+while True:
+    if button_a.is_pressed():
+        current_temperature_celcius = temperature()
+        current_temperature_kelvin = current_temperature_celcius + 273.15
+        display.scroll("The temperature is " +
+                       str(current_temperature_kelvin) + " K.")
+
+        display.clear()
+        display.show(Image.HAPPY)
