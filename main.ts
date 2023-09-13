@@ -17,7 +17,7 @@ input.onButtonPressed(Button.A, function () {
   currentTemperatureCelcius = input.temperature()
   currentTemperatureKelvin = currentTemperatureCelcius + 273.15
   currentTemperatureKelvin = Math.round(currentTemperatureKelvin)
-  
+
   basic.showString('The temperature is: ' + currentTemperatureKelvin.toString() + ' K.')
   basic.clearScreen()
   basic.showIcon(IconNames.Happy)
